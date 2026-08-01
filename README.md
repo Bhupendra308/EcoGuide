@@ -54,9 +54,6 @@ Build for production:
 npm run build
 ```
 
-## Preview
-
-Add screenshots or a deployed project link here.
 
 ## Future Improvements
 
