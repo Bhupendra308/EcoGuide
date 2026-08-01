@@ -33,7 +33,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ecoguide.git
+git clone https://github.com/Bhupendra308/EcoGuide.git
 ```
 
 Install dependencies:
