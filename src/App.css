@@ -1,0 +1,233 @@
+/* General Layout & Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Main App Layout Container with breathing room from screen edges */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb Navigation Bar */
+.breadcrumb-nav {
+  background: #ffffff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  border: 1px solid #e2e8f0;
+}
+
+.breadcrumb-nav ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.breadcrumb-nav li {
+  display: flex;
+  align-items: center;
+  color: #718096;
+}
+
+.breadcrumb-nav li:not(:last-child):after {
+  content: "›";
+  margin: 0 10px;
+  color: #cbd5e0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.breadcrumb-nav a {
+  color: #2f855a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.breadcrumb-nav a:hover {
+  color: #22543d;
+  text-decoration: underline;
+}
+
+.breadcrumb-nav span {
+  color: #2d3748;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Page Titles */
+h2.page-title {
+  color: #2d3748;
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Card Grid Layouts */
+.image-grid, .action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-color: #9ae6b4;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  padding: 16px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Action Details Layout (Final Step Cards & Blocks) */
+.action-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.detail-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.detail-card h3 {
+  color: #2f855a;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.detail-card li {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.detail-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+}
+
+
+.home-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 35px; /* <--- Added spacing to separate it from the cards */
+}
+
+.search-input {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3498db;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-top: 40px;
+}
